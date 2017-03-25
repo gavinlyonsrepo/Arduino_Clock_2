@@ -1,8 +1,7 @@
 Arduino Real Time Alarm Clock with Temperature and LED lights. Remote controlled
 
-Arduino Clock , with , Battery backup (real time clock), Time, Date, Alarm, Temperature, LCD output, remote control input, Sleep mode, LED lighting (10X) with 10 light modes
+Arduino Clock with Battery backup (real time clock), Time, Date, Alarm, Temperature, LCD output, remote control input, Sleep mode, LED lighting (10X) with 10 light modes
 
-Arduino Real Time Clock with Alarm and environmental sensors Arduino Clock , with , Battery backup (real time clock), Time, Date, Alarm, Temperature, Humidity, Pressure, LCD output, Keypad input, Sleep mode, LED LCD lighting (4X) white with dimmer control
 
 Parts list
 
