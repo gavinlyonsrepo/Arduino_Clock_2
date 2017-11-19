@@ -8,17 +8,22 @@ Overview
 
 Libraries
 ------------------------
+In src folder you will find the ino file with source code
+it includes a number of libraries.
+
 * <Wire.h>  //I2C comms
 * <LiquidCrystal_I2C.h>// LCD
 * <DS1302.h> //Ral time clock
 * <IRremote.h> //IR remote control
 * <Sleep_n0m1.h> //https://github.com/n0m1/Sleep_n0m1
 
-All can be found on Arduino website site except "sleep_n0m1"
+All are standard libaries which can be found on Arduino website 
+site except "sleep_n0m1", see link.
 
 Parts List
 ------------------------------
-See fritzing diagram in "doc" for assembly instruction.
+See fritzing diagram in "doc" for assembly instruction and schematic. 
+You will need [fritzing](https://en.wikipedia.org/wiki/Fritzing) software to open this.
 
 >LCD module 16X2 I2C module
 >
