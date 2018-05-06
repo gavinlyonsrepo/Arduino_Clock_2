@@ -37,7 +37,7 @@ You will need [fritzing](https://en.wikipedia.org/wiki/Fritzing) software to ope
 >
 >LM35 temperature sensor
 >
->10 Leds  10 current limiting  resistors 5 220ohms 5 68 ohms
+>10 Leds( 5 red 5 bright blue)  10 current limiting  resistors (5 220ohms 5 68 ohms) values depend on on how current user needs and specs of LEDS.
 >
 >one active piezo buzzer (alarm)
 >
