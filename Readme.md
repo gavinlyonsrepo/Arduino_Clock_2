@@ -23,26 +23,18 @@ site except "sleep_n0m1", see link.
 Led mode
 --------------------------------
 The modes are 
-1. All Leds off
-2. All Leds on
-3. All red Leds on
-4. All amber Leds on
-5. All green Leds on
-6. knight rider_1  (led chaser)
-7. knight rider_2  (led chaser)
-8. knight rider_3  (led chaser)
-9. knight rider_4  (led chaser)
-10. Traffic light sequence
-11.  All LEDS Flash on and off
-12. flash red-amber-green in rapid  sequence
-13. Fade in and out the 6 Leds are connected to pins with PWM capability 
-14. Random 1 led turn on and off
-15. Random 3 led turn on and off
-16. Random Multiple LEDs from each array 
-17. Police car lights
-18. Rapid blink same as 11 but much faster.
-19. Fancy Pattern 
-20. Most modes combined in a repeat loop.
+
+0. All Leds off
+1. All Leds on
+2. All red Leds on
+3. All blues on
+4. LEDs bargraph on based on temperature.(0-30C one LED = 3 degrees)
+5. Blink all LEDS on and off 
+6. Fade in and out with PWM all LEDs attached to PWM pins 
+7. Cylon display  (led chaser)
+8. Blink all red , blink all blue.
+9. Random pattern
+
 
 Parts List
 ------------------------------
