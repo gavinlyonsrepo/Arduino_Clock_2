@@ -1,11 +1,22 @@
- 
-// include the library code
+//******************* HEADER ***********************************
+/*
+    Name : clock_number_2
+    Title : Arduino Real Time Alarm Clock and Lamp.
+    Description : Arduino Clock with Battery backup (real time clock), Time, Date, Alarm, Temperature, LCD output, remote control input, Sleep mode, LED lighting (10X) with 10 light modes
+    Author: Gavin Lyons
+    URL: https://github.com/gavinlyonsrepo/Arduino_Clock_2
+*/
+
+
+//*************************** Libraries ********************
 #include <Wire.h> 
 #include <LiquidCrystal_I2C.h>
 #include <DS1302.h>
 #include <IRremote.h>
 #include <Sleep_n0m1.h> //https://github.com/n0m1/Sleep_n0m1
 
+
+//*************************** GLOBALS ********************
 //LEDS
 int ledPins[] = { 
   2, 9, 4, 3, 13, 17, 12, 16, 10, 11};       // an array of pin numbers to which LEDs are attached
@@ -47,6 +58,7 @@ int tim = 1000;  //the value of delay time
 boolean LCDbacklightOn = false;
 boolean LCDDisplayOn = false;
 
+//*************************** SETUP ************************
 void setup() 
 {
   Serial.begin(9600); //baud  
@@ -95,10 +107,10 @@ void setup()
                lcd.clear();
 }
 
+//******************* MAIN LOOP *****************
 void loop() 
 {
-  
-  // put your main code here, to run repeatedly: 
+   
    if (irrecv.decode(&results)) 
    {   
         DecodeIR();
@@ -113,6 +125,11 @@ void loop()
   LEDMode();
 }
 
+
+// ********************* FUNCTIONS *************************
+
+
+// Display LM35 temperature on LCD
 void LM35Display()
 
 {
@@ -129,6 +146,7 @@ void LM35Display()
   delay(200);
 }
 
+// Display the time  and date on LCD
 void print_time()
 {
    // DS1302  
@@ -193,9 +211,7 @@ void print_time()
      delay(200);
 }
 
-
-
-
+// Function to check LED mode
 void LEDMode()
 {
   // Serial.println(Ledmodecount);
@@ -378,7 +394,7 @@ void LEDMode()
   }
 }
 
-
+// Function to Decode remote control input
 void DecodeIR()
 {
     //decode remote first Beko remote second Chorus remote
@@ -506,7 +522,7 @@ void DecodeIR()
     
 }
 
-
+// Function to set the date - time
 void SetTime()
 {
   //clear variables
@@ -580,6 +596,7 @@ void SetTime()
   rtc.time(t);
 }
 
+// Function to Debug remote control input and display it to LCD
 void IRdebug()
 
 {
@@ -606,6 +623,7 @@ void IRdebug()
     lcd.clear();
 }
 
+//Function to set the Alarm 
 void SetAlarm()
 {
   //clear variables
@@ -664,6 +682,7 @@ void SetAlarm()
   
 }
 
+//Function to display alarm time
 void DisplayAlarm()
 {
                lcd.clear();
@@ -680,6 +699,7 @@ void DisplayAlarm()
                lcd.clear();
 }
 
+//function to display help for Beko  7SZ206 remote control
 void HelpBeko()
 {
                lcd.clear();
@@ -738,6 +758,7 @@ void HelpBeko()
                lcd.clear();
 }
 
+//function to display help for Chorus Model: Um4-r03 remote control
 void HelpChorus ()
 {
                lcd.clear();
@@ -797,6 +818,8 @@ void HelpChorus ()
                lcd.clear();
 }         
 
+//Function to handle sleep mode
+// wakes up every 50 seconds and checks alarm. if alarm set leaves function.
 void SleepMode() 
 {
    
@@ -826,5 +849,4 @@ void SleepMode()
           } 
     } while (loopforever < 50);
 }
-
-
+//*************************** EOF *****************************
