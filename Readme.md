@@ -20,6 +20,29 @@ it includes a number of libraries.
 All are standard libraries which can be found on Arduino website, 
 site except "sleep_n0m1", see link.
 
+Led mode
+--------------------------------
+The modes are 
+1. All Leds off
+2. All Leds on
+3. All red Leds on
+4. All amber Leds on
+5. All green Leds on
+6. knight rider_1  (led chaser)
+7. knight rider_2  (led chaser)
+8. knight rider_3  (led chaser)
+9. knight rider_4  (led chaser)
+10. Traffic light sequence
+11.  All LEDS Flash on and off
+12. flash red-amber-green in rapid  sequence
+13. Fade in and out the 6 Leds are connected to pins with PWM capability 
+14. Random 1 led turn on and off
+15. Random 3 led turn on and off
+16. Random Multiple LEDs from each array 
+17. Police car lights
+18. Rapid blink same as 11 but much faster.
+19. Fancy Pattern 
+20. Most modes combined in a repeat loop.
 
 Parts List
 ------------------------------
@@ -36,11 +59,13 @@ See eagle diagram in "doc" schematic.
 >
 >LM35 temperature sensor
 >
->one active piezo buzzer (alarm)
+>one active buzzer 
 >
 >One VS1838 NEC Infrared IR Wireless Remote Control Sensor Module
 >
 >10 Leds( 5 red 5 bright blue)  10 current limiting  resistors (5 220 ohms 5 150 ohms) values depend on on how current user needs and specs of LEDS. 
+>
+>remote control(The Unit is designed for BEKO MODEL: 7SZ206 or Chorus remote Model: Um4-r03) can easily be re-factored for others by end user.
 >
 
 Led calculations in this design:
