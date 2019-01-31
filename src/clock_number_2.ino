@@ -7,16 +7,6 @@
 #include <Sleep_n0m1.h> //https://github.com/n0m1/Sleep_n0m1
 
 //LEDS
-// BlueLed1 = 2;
-// BlueLed2 = ~9;
-// BlueLed3 = 4;
-// BlueLed4 = !~3;
-// BlueLed5 = 13;
-// RedLed1 = 17;
-// RedLed2 = 12;
-// RedLed3  =16;
-// RedLed4 =~10;
-// RedLed5  =!~11;
 int ledPins[] = { 
   2, 9, 4, 3, 13, 17, 12, 16, 10, 11};       // an array of pin numbers to which LEDs are attached
 int pinCount = 10; 
@@ -141,12 +131,11 @@ void LM35Display()
 
 void print_time()
 {
-    /* DS1302  */
+   // DS1302  
     Time t = rtc.time();
-    /**/
     memset(day, 0, sizeof(day));
 
-    /* buf */
+    
         sprintf(buf, "%02d%02d%02d%02d%02d", t.hr, t.min ); // format time date day in string
      
       //Serial.println(buf);
@@ -827,25 +816,15 @@ void SleepMode()
        Serial.println(buf);
         Serial.println(alarm);
       //check alarm time
-      /* DS1302  */
+      // DS1302  
       Time t = rtc.time();
-         /* buf */
         sprintf(buf, "%02d%02d%02d%02d%02d", t.hr, t.min ); // format time date day in string
       if ((buf[0] == alarm[0]) && (buf[1] == alarm[1]) && (buf[2] == alarm[2]) &&  (buf[3] == alarm[3]))
           {       
           Serial.println("alarm");
           return;
           } 
-//           
-//       if (irrecv.decode(&results)) 
-//       {   
-//          Serial.println("remote");
-//          lcd.backlight();
-//          lcd.display();
-//          return;   
-////       }  
     } while (loopforever < 50);
-  //   Serial.println("wake");
 }
 
 
