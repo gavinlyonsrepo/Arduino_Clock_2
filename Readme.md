@@ -55,7 +55,7 @@ See eagle diagram in "doc" schematic.
 >
 >One VS1838 NEC Infrared IR Wireless Remote Control Sensor Module
 >
->10 Leds( 5 red 5 bright blue)  10 current limiting  resistors (5 220 ohms 5 150 ohms) values depend on on how current user needs and specs of LEDS. 
+>10 Leds( 5 red 5 bright blue)  10 current limiting  resistors (5 220 ohms 5 150 ohms) 
 >
 >remote control(The Unit is designed for BEKO MODEL: 7SZ206 or Chorus remote Model: Um4-r03) can easily be re-factored for others by end user.
 >
@@ -63,7 +63,17 @@ See eagle diagram in "doc" schematic.
 Led calculations in this design:
 
 Red Vd of 2V, Vcc-Vd/Rs = 13mA. Bright Blue Vd 3, Vcc-Vd/Rs = 13mA.
-Total current consumption of LED circuit = 130mA.
+Total current consumption of LED circuit in theory = 130mA.
+
+Current Consumption figures:
+
+1. 55mA , normal mode
+2. 31mA , Sleep mode
+3. 38mA , LCD off
+4. 165mA , All LEDS on
+
+
+
 
 Schematic
 ---------------------------
