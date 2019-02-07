@@ -41,11 +41,9 @@ Parts List
 See eagle diagram in "doc" schematic. 
 
 
->LCD module 16X2 I2C module
+>LCD module 16X2 with I2C module
 >
->Arduino UNO rev 3 or NANO.
->
->Remote control, 38kHz carrier frequency NEC.
+>NANO Arduino module or UNO rev 3 
 >
 >DS 1302 Real Time Clock module (with CR2032 battery)
 >
@@ -55,25 +53,23 @@ See eagle diagram in "doc" schematic.
 >
 >One VS1838 NEC Infrared IR Wireless Remote Control Sensor Module
 >
->10 Leds( 5 red 5 bright blue)  10 current limiting  resistors (5 220 ohms 5 150 ohms) 
+>10 Leds( 5 red 5 bright blue)  10 current limiting resistors (5 220 ohms 5 150 ohms) 
 >
->remote control(The Unit is designed for BEKO MODEL: 7SZ206 or Chorus remote Model: Um4-r03) can easily be re-factored for others by end user.
+>Remote control 38kHz carrier frequency NEC.(The Unit is designed for BEKO MODEL: B92187F or Chorus remote Model: Um4(AAA,r03) can easily be re-factored for others(which can communicate with Vs1838) by end user.  The unit includes an option to scan remotes and give the codes on LCD. 
+[Remote control information](https://github.com/gavinlyonsrepo/Arduino_Clock_2/blob/master/doc) 
 >
 
-Led calculations in this design:
+Some current calculations in this design:
 
-Red Vd of 2V, Vcc-Vd/Rs = 13mA. Bright Blue Vd 3, Vcc-Vd/Rs = 13mA.
-Total current consumption of LED circuit in theory = 130mA.
+Red Vd of 2V, Vcc-Vd/Rs = ~13mA. Bright Blue Vd 3, Vcc-Vd/Rs = ~13mA.
+Total current consumption of LED circuit in theory = ~130mA.
 
-Current Consumption figures:
+Measured Current Consumption figures:
 
 1. 55mA , normal mode
 2. 31mA , Sleep mode
-3. 38mA , LCD off
-4. 165mA , All LEDS on
-
-
-
+3. 38mA , normal mode + LCD off
+4. 171mA , normal mode + All LEDS on
 
 Schematic
 ---------------------------
