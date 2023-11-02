@@ -76,8 +76,3 @@ Schematic
 
 ![ScreenShot schematic](https://github.com/gavinlyonsrepo/Arduino_Clock_2/blob/master/doc/eagle/clock2.png)
 
-
-Copyright
--------------------------------
-
-Copyright (C) 2016 G Lyons This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, see license.md for more details
